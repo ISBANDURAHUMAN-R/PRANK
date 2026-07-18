@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Totally Important Website</title>
+    <style>
+        body{
+            margin:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:black;
+            color:white;
+            font-family:Arial,sans-serif;
+            flex-direction:column;
+        }
+        button{
+            padding:15px 30px;
+            font-size:20px;
+            cursor:pointer;
+        }
+        #symbol{
+            font-size:200px;
+            margin-top:20px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Click the Secret Button</h1>
+<button onclick="reveal()">Reveal</button>
+
+<div id="symbol">🖕</div>
+
+<script>
+function reveal(){
+    document.getElementById("symbol").style.display = "block";
+}
+</script>
+
+</body>
+</html>
