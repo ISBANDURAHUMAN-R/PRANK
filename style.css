@@ -1,0 +1,186 @@
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(circle at center,#181818 0%,#080808 45%,#000 100%);
+    color:white;
+    font-family:Arial,sans-serif;
+    overflow:hidden;
+    transition:.5s;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    text-align:center;
+}
+
+h1{
+    font-size:44px;
+    margin-bottom:15px;
+    text-shadow:0 0 20px rgba(255,255,255,.25);
+    transition:.3s;
+}
+
+#subtitle{
+    color:#888;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+button{
+    padding:16px 40px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:black;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.25s;
+    box-shadow:0 0 25px rgba(255,255,255,.2);
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 40px rgba(255,255,255,.5);
+}
+
+#loading{
+    display:none;
+    margin-top:30px;
+}
+
+#message{
+    color:#aaa;
+    font-size:18px;
+    margin-bottom:15px;
+    min-height:25px;
+}
+
+.progress-box{
+    width:100%;
+    height:12px;
+    background:#222;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid #333;
+}
+
+#progress{
+    width:0%;
+    height:100%;
+    background:white;
+    border-radius:20px;
+    transition:width .2s;
+    box-shadow:0 0 15px white;
+}
+
+#warning{
+    display:none;
+    margin-top:30px;
+    color:#ff3030;
+    font-size:25px;
+    font-weight:bold;
+    animation:pulse .5s infinite alternate;
+}
+
+#symbol{
+    display:none;
+    font-size:180px;
+    margin-top:20px;
+    animation:pop .5s ease,shake .12s infinite;
+}
+
+#finalText{
+    display:none;
+    margin-top:10px;
+    font-size:30px;
+    font-weight:bold;
+    line-height:1.5;
+}
+
+#again{
+    display:none;
+    margin-top:30px;
+    background:#181818;
+    color:white;
+    border:1px solid #444;
+}
+
+.glitch{
+    animation:glitch .12s infinite;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes shake{
+    0%{transform:translate(0)}
+    25%{transform:translate(5px,-3px)}
+    50%{transform:translate(-5px,3px)}
+    75%{transform:translate(3px,4px)}
+    100%{transform:translate(0)}
+}
+
+@keyframes pulse{
+    from{
+        opacity:.5;
+        transform:scale(1);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1.05);
+    }
+}
+
+@keyframes glitch{
+    0%{
+        transform:translate(0);
+        text-shadow:2px 0 red;
+    }
+
+    25%{
+        transform:translate(-4px,2px);
+        text-shadow:-2px 0 cyan;
+    }
+
+    50%{
+        transform:translate(4px,-2px);
+        text-shadow:2px 0 red;
+    }
+
+    75%{
+        transform:translate(-2px,-3px);
+        text-shadow:-2px 0 cyan;
+    }
+
+    100%{
+        transform:translate(0);
+    }
+}
+
+body.danger{
+    background:
+        radial-gradient(circle,#300000,#090000 60%,#000);
+}
+
