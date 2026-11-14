@@ -8,9 +8,9 @@
 Project Prank is a client-side interactive web animation and audio experiment. It combines rapid CSS keyframe glitch transformations, viewport jitter animations, and procedural sound synthesis to deliver a lighthearted visual prank experience directly inside the browser.
 
 ## ❖ Key Features
-- ▪ Viewport glitch shaders and CSS keyframe camera vibration effects.
-- ▫ Real-time procedural audio synthesis built with the Web Audio API without external audio files.
-- ▴ Single-file zero-dependency architecture that runs entirely client-side.
+- Viewport glitch shaders and CSS keyframe camera vibration effects.
+- Real-time procedural audio synthesis built with the Web Audio API without external audio files.
+- Single-file zero-dependency architecture that runs entirely client-side.
 
 ## ⬢ Technologies Used
 - HTML5
