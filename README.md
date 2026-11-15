@@ -4,6 +4,8 @@
 
 # ◈ Project Prank
 
+[![CI](https://github.com/ISBANDURAHUMAN-R/PRANK/actions/workflows/ci.yml/badge.svg)](https://github.com/ISBANDURAHUMAN-R/PRANK/actions/workflows/ci.yml)
+
 ## ◆ About the Project
 Project Prank is a client-side interactive web animation and audio experiment. It combines rapid CSS keyframe glitch transformations, viewport jitter animations, and procedural sound synthesis to deliver a lighthearted visual prank experience directly inside the browser.
 
@@ -11,6 +13,28 @@ Project Prank is a client-side interactive web animation and audio experiment. I
 - Viewport glitch shaders and CSS keyframe camera vibration effects.
 - Real-time procedural audio synthesis built with the Web Audio API without external audio files.
 - Single-file zero-dependency architecture that runs entirely client-side.
+
+## ◆ System Architecture
+```mermaid
+graph TD
+    subgraph TriggerLayer ["Interaction & Event Listener"]
+        UserAction[User Click / Key Interaction] --> EventTrigger[Prank State Activator]
+    end
+
+    subgraph VisualEngine ["CSS3 Keyframe & Animation FX"]
+        EventTrigger --> GlitchClass[Inject Jitter & Glitch CSS Classes]
+        GlitchClass --> TransformMatrix[Rapid Viewport Transform Shifts]
+        GlitchClass --> ColorInvert[High-Frequency Color Inversion]
+    end
+
+    subgraph AudioEngine ["Web Audio API Synthesis"]
+        EventTrigger --> AudioCtx[AudioContext Initialization]
+        AudioCtx --> Osc[Oscillator Wave Generator]
+        AudioCtx --> Noise[Procedural Noise Buffer]
+        Osc & Noise --> GainNode[Gain Dynamic Modulator]
+        GainNode --> Speaker[Audio Output Destination]
+    end
+```
 
 ## ⬢ Technologies Used
 - HTML5
