@@ -18,21 +18,21 @@ Project Prank is a client-side interactive web animation and audio experiment. I
 ```mermaid
 graph TD
     subgraph TriggerLayer ["Interaction & Event Listener"]
-        UserAction[User Click / Key Interaction] --> EventTrigger[Prank State Activator]
+        UserAction["User Click /<br/>Key Interaction"] --> EventTrigger["Prank State<br/>Activator"]
     end
 
     subgraph VisualEngine ["CSS3 Keyframe & Animation FX"]
-        EventTrigger --> GlitchClass[Inject Jitter & Glitch CSS Classes]
-        GlitchClass --> TransformMatrix[Rapid Viewport Transform Shifts]
-        GlitchClass --> ColorInvert[High-Frequency Color Inversion]
+        EventTrigger --> GlitchClass["Inject Jitter &amp;<br/>Glitch CSS Classes"]
+        GlitchClass --> TransformMatrix["Rapid Viewport<br/>Transform Shifts"]
+        GlitchClass --> ColorInvert["High-Frequency<br/>Color Inversion"]
     end
 
     subgraph AudioEngine ["Web Audio API Synthesis"]
-        EventTrigger --> AudioCtx[AudioContext Initialization]
-        AudioCtx --> Osc[Oscillator Wave Generator]
-        AudioCtx --> Noise[Procedural Noise Buffer]
-        Osc & Noise --> GainNode[Gain Dynamic Modulator]
-        GainNode --> Speaker[Audio Output Destination]
+        EventTrigger --> AudioCtx["AudioContext<br/>Initialization"]
+        AudioCtx --> Osc["Oscillator Wave<br/>Generator"]
+        AudioCtx --> Noise["Procedural Noise<br/>Buffer"]
+        Osc & Noise --> GainNode["Gain Dynamic<br/>Modulator"]
+        GainNode --> Speaker["Audio Output<br/>Destination"]
     end
 ```
 
