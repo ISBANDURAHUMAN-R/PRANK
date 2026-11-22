@@ -17,22 +17,22 @@ Project Prank is a client-side interactive web animation and audio experiment. I
 ## ◆ System Architecture
 ```mermaid
 graph TD
-    subgraph TriggerLayer ["Interaction & Event Listener"]
-        UserAction["User Click /<br/>Key Interaction"] --> EventTrigger["Prank State<br/>Activator"]
+    subgraph TriggerLayer ["&nbsp; Interaction &amp; Event Listener &nbsp;"]
+        UserAction["&nbsp; User Click / &nbsp;<br/>&nbsp; Key Interaction &nbsp;"] --> EventTrigger["&nbsp; Prank State &nbsp;<br/>&nbsp; Activator &nbsp;"]
     end
 
-    subgraph VisualEngine ["CSS3 Keyframe & Animation FX"]
-        EventTrigger --> GlitchClass["Inject Jitter &amp;<br/>Glitch CSS Classes"]
-        GlitchClass --> TransformMatrix["Rapid Viewport<br/>Transform Shifts"]
-        GlitchClass --> ColorInvert["High-Frequency<br/>Color Inversion"]
+    subgraph VisualEngine ["&nbsp; CSS3 Keyframe &amp; Animation FX &nbsp;"]
+        EventTrigger --> GlitchClass["&nbsp; Inject Jitter &amp; &nbsp;<br/>&nbsp; Glitch CSS &nbsp;"]
+        GlitchClass --> TransformMatrix["&nbsp; Viewport Transform &nbsp;<br/>&nbsp; Shifts &nbsp;"]
+        GlitchClass --> ColorInvert["&nbsp; High-Frequency &nbsp;<br/>&nbsp; Color Inversion &nbsp;"]
     end
 
-    subgraph AudioEngine ["Web Audio API Synthesis"]
-        EventTrigger --> AudioCtx["AudioContext<br/>Initialization"]
-        AudioCtx --> Osc["Oscillator Wave<br/>Generator"]
-        AudioCtx --> Noise["Procedural Noise<br/>Buffer"]
-        Osc & Noise --> GainNode["Gain Dynamic<br/>Modulator"]
-        GainNode --> Speaker["Audio Output<br/>Destination"]
+    subgraph AudioEngine ["&nbsp; Web Audio API Synthesis &nbsp;"]
+        EventTrigger --> AudioCtx["&nbsp; AudioContext &nbsp;<br/>&nbsp; Initialization &nbsp;"]
+        AudioCtx --> Osc["&nbsp; Oscillator Wave &nbsp;<br/>&nbsp; Generator &nbsp;"]
+        AudioCtx --> Noise["&nbsp; Procedural Noise &nbsp;<br/>&nbsp; Buffer &nbsp;"]
+        Osc & Noise --> GainNode["&nbsp; Gain Dynamic &nbsp;<br/>&nbsp; Modulator &nbsp;"]
+        GainNode --> Speaker["&nbsp; Audio Output &nbsp;<br/>&nbsp; Destination &nbsp;"]
     end
 ```
 
